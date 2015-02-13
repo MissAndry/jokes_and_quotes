@@ -1,4 +1,4 @@
-<div class=<%= "container" if Post.all.empty? %>>
+<div class=<%= "container" if no_posts? %>>
   <div class="post-form">
     
     <%= form_for @post do |f| %>

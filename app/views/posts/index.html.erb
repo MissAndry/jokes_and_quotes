@@ -1,5 +1,5 @@
 <%= @error if @error %>
-<% if !@posts.empty? %>
+<% if !no_posts? %>
 	<% @posts.each do |post| %>
 
 		<div class="post-index-individual">

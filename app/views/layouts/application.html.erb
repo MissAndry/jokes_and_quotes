@@ -32,7 +32,7 @@
     <div class="padding">
       <nav>
         <ul>
-          <% if current_user.nil? && !Post.all.empty? %>
+          <% if current_user.nil? && !no_posts? %>
             <li><%= link_to "sign in", new_session_path, class: "sign_in_link", remote: true %></li>
             <li><%= link_to "sign up", new_user_path, class: "sign_up_link", remote: true %></li>
           <% elsif current_user %>
@@ -42,7 +42,7 @@
           <% end %>
         </ul>
       </nav>
-      <div class=<%= "container" unless Post.all.empty? %>>
+      <div class=<%= "container" unless no_posts? %>>
         <%= yield %>
       </div>
     </div>
