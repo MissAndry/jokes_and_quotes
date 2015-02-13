@@ -57,6 +57,14 @@
   border-radius: 2px;
 }
 
+.button a, .button a:visited {
+  color: #fff;
+}
+
+.button a:hover {
+  color: #fff;
+}
+
 .add-comment {
   margin: 10px 0;
 }
