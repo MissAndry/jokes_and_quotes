@@ -5,7 +5,7 @@ function deliverMyForm(deliveree){
   $.get( url ).done(function(response){
     // $('.modal').css({ 'height': $(document).innerHeight(), 'width': $(document).innerWidth() });
     $('.modal').show();
-    $('#sign-in-sign-up').show();
+    $('#sign-in-sign-up').fadeIn(200);
     $("#sign-in-sign-up").html(response);
   });
 }

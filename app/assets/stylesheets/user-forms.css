@@ -24,6 +24,7 @@
   width: 300px;
   background: #f0f0f0;
   border-radius: 2px;
+  display: none;
 }
 
 .close-modal {

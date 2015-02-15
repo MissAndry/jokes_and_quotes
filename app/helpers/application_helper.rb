@@ -59,4 +59,12 @@ module ApplicationHelper
     return minute if minute.to_s.length >= 2
     "0" + minute.to_s
   end
+
+  def container_class
+    classes = ""
+    classes += "container " unless no_posts?
+    classes += "logged-in" if current_user
+    puts classes.inspect
+    classes
+  end
 end

@@ -12,9 +12,12 @@ $(document).ready(function(){
       url: url,
       type: method,
       success: function(response){
+        if ($('.logged-in').length === 0){
+          sweetAlert("You must be logged in to do that!", "Please log in or sign up");
+        } else {
         $("#" + countId).parent().replaceWith(response);
         $("#" + upvoteId).addClass("upvoted");
-        $("#" + countId).addClass("upvoted");
+        $("#" + countId).addClass("upvoted");}
       }
     });
     return false;
@@ -32,9 +35,13 @@ $(document).ready(function(){
       url: url,
       type: method,
       success: function(response){
+        if ($('.logged-in').length === 0){
+          sweetAlert("You must be logged in to do that!", "Please log in or sign up");
+        } else {
         $("#" + countId).parent().replaceWith(response);
         $("#" + upvoteId).addClass("downvoted");
         $("#" + countId).addClass("downvoted");
+      }
       }
     });
   return false;
@@ -52,9 +59,13 @@ $(document).ready(function(){
       url: url,
       type: method,
       success: function(response){
+        if ($('.logged-in').length === 0){
+          sweetAlert("You must be logged in to do that!", "Please log in or sign up");
+        } else {
         $("#" + countId).parent().replaceWith(response);
         $("#" + upvoteId).addClass("upvoted");
         $("#" + countId).addClass("upvoted");
+      }
       }
     });
     return false;
@@ -72,9 +83,13 @@ $(document).ready(function(){
       url: url,
       type: method,
       success: function(response){
+        if ($('.logged-in').length === 0){
+          sweetAlert("You must be logged in to do that!", "Please log in or sign up");
+        } else {
         $("#" + countId).parent().replaceWith(response);
         $("#" + upvoteId).addClass("downvoted");
         $("#" + countId).addClass("downvoted");
+      }
       }
     });
   return false;
