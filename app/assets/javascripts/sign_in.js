@@ -26,12 +26,12 @@ function submitUser(user){
 }
 
 $(document).ready(function(){
-  $(".sign_in_link").click(function(e) {
+  $("body").on("click", ".sign_in_link", function(e) {
     e.preventDefault();
     deliverMyForm($(this));
   });
 
-  $(".sign_up_link").click(function(e) {
+  $("body").on("click", ".sign_up_link", function(e) {
     e.preventDefault();
     deliverMyForm($(this));
   });

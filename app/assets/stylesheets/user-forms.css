@@ -10,6 +10,12 @@
   z-index: 1;
 }
 
+.modal-link {
+  clear: both;
+  text-align: center;
+  padding: 3%;
+}
+
 #sign-in-sign-up {
   position: fixed;
   z-index: 2;
