@@ -32,6 +32,15 @@ p.error-text{
   list-style-type: circle;
 }
 
+.site-title.smaller {
+  height: 55px;
+}
+
+.site-title.smaller h1 {
+  margin: 0 0 5px;
+  font-size: 30px !important;
+}
+
 .site-title {
   background-color: #60c000;
   display: inline-block;
