@@ -15,16 +15,12 @@ class Comment < ActiveRecord::Base
     self.user.username
   end
 
-  def depth(comment)
-    # count the number of parents this comment has
-    # somehow? With reverse tree traversal
-    if comment.commentable.is_a? Comment
-      increase_parent_count
-      new_comment = comment.commentable
-      depth(new_comment)
-    else
-      parent_count
-    end
+  def depth(comment=self)
+    return parent_count if comment.commentable.is_a? Post
+
+    increase_parent_count
+    new_comment = comment.commentable
+    depth(new_comment)
   end
 
   def parent_count
