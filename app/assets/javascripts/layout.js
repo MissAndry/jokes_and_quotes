@@ -10,6 +10,6 @@ function shrinkHeader(){
   }
 }
 
-$(function(){
-  $(window).scroll(shrinkHeader());
-});
+// $(function(){
+//   $(window).scroll(shrinkHeader());
+// });
