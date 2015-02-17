@@ -32,8 +32,8 @@ $(document).ready(function(){
     request = $.post( url, comment );
 
     request.done(function(response){
+      $('.add-comment.button').show();
       form.hide();
-      $('.main_add_comment_btn').show();
       $('#comments-container').append(response);
     });
     return false;
@@ -66,7 +66,7 @@ $(document).ready(function(){
     request.done(function(response){
       console.log(form.siblings());
       form.hide();
-      $('.sub_add_comment_link').show();
+      $('.sub-comment-link').show();
       form.parent().parent().siblings('ul').append(response);
     });
     return false;
